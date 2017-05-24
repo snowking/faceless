@@ -43,53 +43,7 @@ A是会话的发起者，B是会话的响应者，其中的每一条定义为消
     B:我觉得你很6
 ```
 
-```objective-c
 
--(void)viewDidLoad{
-
-    Person *person = [[Person alloc] init];
-    person.name = @"King";
-    person.likeCount = @1;
-
-    NKKVOLabel *likeLabel = [[NKKVOLabel alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
-    [self.view addSubview:likeLabel];
-    
-    likeLabel.target = self;
-    likeLabel.renderMethod = @selector(stringWithNumber:);
-    
-    [likeLabel bindValueOfModel:person forKeyPath:@"likeCount"];
-}
-    
--(NSString*)stringWithNumber:(NSNumber*)number{
-    
-    if (!number) {
-        number = @0;
-    }
-    NSString *finalString = [NSString stringWithFormat:@"%@", number];
-    
-    return finalString;
-}
-
-```
-
-We can also set the label's frame in the renderMethod if we need.
-
-The NKKVOLabel also provide a singleTapped action
-
-```objective-c
-
-
-    likeLabel.singleTapped = @selector(like:);
-    
-    
--(void)like:(id)sender{
-    
-    NSInteger count = [self.person.likeCount integerValue];
-    count++;
-
-    self.person.likeCount = [NSNumber numberWithInteger:count];
-}
-```
 
 ## Prerequisites
 
