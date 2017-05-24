@@ -3,24 +3,17 @@
 一键创建人工智能助理
 
 ## 基本名词定义
-
-Basic usage
-
+一组会话，Conversation
 ```objective-c
-
     A:你好，我是Neo
     A:你今年多大了?
     B:28
     A:你真年轻
     B:谢谢
-    
 ```
-When we edit the name, just set the person's name, and the label will display the new name automatically.
-
+A是会话的发起者，B是会话的响应者，其中的每一条定义为消息，Message
 ```objective-c
-
-    person.name = @"Another King";
-
+    A:你好，我是Neo
 ```
 
 If the value is not NSSting, such as NSNumber or some other type, or we want to do some additional things when a new value is set, we can tell the label a renderMethod to tell the label the string we need.
