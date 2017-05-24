@@ -24,10 +24,24 @@ A是会话的发起者，B是会话的响应者，其中的每一条定义为消
 - 图文
 - 选择题（单选、多选）
 - 带注释的消息
-- 结果展示型消息（分析结果展示）
-```
+- 结果展示型消息（分析结果展示，带Slider）
 
-If the value is not NSSting, such as NSNumber or some other type, or we want to do some additional things when a new value is set, we can tell the label a renderMethod to tell the label the string we need.
+## 消息响应类型
+不需要响应的消息，发起之后无需等待响应者回应，继续发后续的消息
+```objective-c
+    A:你好，我是Neo                  //不需要响应的消息
+    A:你今年多大了?
+```
+数字类型响应
+```objective-c                  
+    A:你今年多大了?                  //数字类型响应的消息
+    B:18
+```
+标准响应，接收所有文字输入
+```objective-c                  
+    A:能给我点建议吗?                  //标准响应
+    B:我觉得你很6
+```
 
 ```objective-c
 
