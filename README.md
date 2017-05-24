@@ -1,21 +1,19 @@
 # Faceless 无面
 
-一键创建人工智能聊天助理
+一键创建人工智能助理
 
-## Usage
+## 基本名词定义
 
 Basic usage
 
 ```objective-c
 
-    Person *person = [[Person alloc] init];
-    person.name = @"King";
+    A:你好，我是Neo
+    A:你今年多大了?
+    B:28
+    A:你真年轻
+    B:谢谢
     
-    NKKVOLabel *label = [[NKKVOLabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    [self.view addSubview:label];
-    
-    [label bindValueOfModel:person forKeyPath:@"name"];
-
 ```
 When we edit the name, just set the person's name, and the label will display the new name automatically.
 
