@@ -7,13 +7,24 @@
 ```objective-c
     A:你好，我是Neo
     A:你今年多大了?
-    B:28
+    B:18
     A:你真年轻
     B:谢谢
 ```
 A是会话的发起者，B是会话的响应者，其中的每一条定义为消息，Message
 ```objective-c
     A:你好，我是Neo
+```
+```objective-c
+    B:28
+```
+## 消息类型
+- 纯文本
+- 纯图片
+- 图文
+- 选择题（单选、多选）
+- 带注释的消息
+- 结果展示型消息（分析结果展示）
 ```
 
 If the value is not NSSting, such as NSNumber or some other type, or we want to do some additional things when a new value is set, we can tell the label a renderMethod to tell the label the string we need.
